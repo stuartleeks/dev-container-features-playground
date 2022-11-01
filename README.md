@@ -9,5 +9,6 @@ If you want to create your own features, see <https://github.com/devcontainers/f
 
 | Feature                                    | Description                                                   |
 | ------------------------------------------ | ------------------------------------------------------------- |
-| [bash-history](src/bash-history/README.md) | Preserve bash history across dev container instances/rebuilds |
+| [shell-history](src/shell-history/README.md) | Preserve shell history across dev container instances/rebuilds |
+| [bash-history](src/bash-history/README.md) | (Precursor to shell-history) Preserve bash history across dev container instances/rebuilds |
 
