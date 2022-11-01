@@ -1,15 +1,15 @@
 
-# Bash history (bash-history)
+# Bash History (bash-history)
 
-Mounts a volume to preserve bash-history in the dev container
+Preserve bash history across dev container instances
 
 ## Example Usage
 
 ```json
 "features": {
-        "ghcr.io/stuartleeks/dev-container-features/bash-history:0": {
-            "version": "latest"
-        }
+    "ghcr.io/stuartleeks/dev-container-features-playground/bash-history:0": {
+        "version": "latest"
+    }
 }
 ```
 
@@ -23,4 +23,4 @@ Mounts a volume to preserve bash-history in the dev container
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/bash-completion/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features-playground/blob/main/src/bash-history/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
