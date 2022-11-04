@@ -18,7 +18,7 @@ Temporary feature based on https://github.com/devcontainers/features/pull/240 (w
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select or enter a version. | string | latest |
-| extended | Choose whether to install hugo extended. | boolean | false |
+| extended | Install Hugo extended for SASS/SCSS changes | boolean | false |
 
 
 
