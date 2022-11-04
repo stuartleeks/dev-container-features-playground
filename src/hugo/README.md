@@ -1,13 +1,13 @@
 
 # Hugo (hugo)
 
-
+Temporary feature based on https://github.com/devcontainers/features/pull/240 (waiting for it to be merged!)
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/features/hugo:1": {
+    "ghcr.io/stuartleeks/dev-container-features-playground/hugo:1": {
         "version": "latest"
     }
 }
@@ -24,4 +24,4 @@
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers/features/blob/main/src/hugo/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features-playground/blob/main/src/hugo/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
