@@ -1,0 +1,29 @@
+{
+  "id": "hugo",
+  "version": "1.1.0",
+  "name": "Hugo",
+  "description": "Temporary feature based on https://github.com/devcontainers/features/pull/240 (waiting for it to be merged!)",
+  "documentationURL": "https://github.com/devcontainers/features/tree/main/src/hugo",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    },
+    "extended": {
+      "type": "boolean",
+      "default": false,
+      "description": "Install Hugo extended for SASS/SCSS changes"
+    }
+  },
+  "containerEnv": {
+    "HUGO_DIR": "/usr/local/hugo",
+    "PATH": "/usr/local/hugo/bin:${PATH}"
+  },
+  "installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
