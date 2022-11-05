@@ -1,11 +1,10 @@
 {
     "name": "Shell History Sync",
     "id": "shell-history-sync",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Temporary utility feature to copy bash history from my manually added volumes to the volume added by shell-history",
     "options": {},
     "installsAfter": [
-        "ghcr.io/stuartleeks/dev-container-features/shell-history",
-        "./shell-history"
+        "ghcr.io/stuartleeks/dev-container-features/shell-history:0"
     ]
 }
