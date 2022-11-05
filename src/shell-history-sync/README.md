@@ -20,6 +20,12 @@ Temporary utility feature to copy bash history from my manually added volumes to
 
 
 
+## Changelog
+
+| Version | Notes                     |
+| ------- | ------------------------- |
+| 0.0.3   | Fix `installsAfter` value |
+| 0.0.1   | Initial version           |
 
 ---
 
