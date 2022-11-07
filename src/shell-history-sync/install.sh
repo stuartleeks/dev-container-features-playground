@@ -16,7 +16,7 @@ cat << EOF >> "$_REMOTE_USER_HOME/.bashrc"
 
 # shell-history-persistence start 
 if [[ -n "\$HISTFILE_OLD" && "\$HISTFILE_OLD" != "\$HISTFILE" ]]; then
-    # Assume that azure-cli-persistence has created the HISTFILE_OLD env var
+    # Assume that shell-history has created the HISTFILE_OLD env var
     # that points to the previously configured location for the history file
     # Test if we have a marker file indicating that we've copied the history 
     # contents over. If not, copy and create the marker file

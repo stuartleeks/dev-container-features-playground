@@ -1,7 +1,7 @@
 {
     "name": "Shell History Sync",
     "id": "shell-history-sync",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Temporary utility feature to copy bash history from my manually added volumes to the volume added by shell-history",
     "options": {},
     "installsAfter": [
