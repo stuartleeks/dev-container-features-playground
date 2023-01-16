@@ -7,9 +7,7 @@ Temporary utility feature to copy bash history from my manually added volumes to
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features-playground/shell-history-sync:0": {
-        "version": "latest"
-    }
+    "ghcr.io/stuartleeks/dev-container-features-playground/shell-history-sync:0": {}
 }
 ```
 
