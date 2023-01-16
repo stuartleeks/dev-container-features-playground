@@ -1,0 +1,17 @@
+{
+  "name": "WSLg forwarding",
+  "id": "wslg-forwarding",
+  "version": "0.0.1",
+  "description": "Forward ",
+  "options": {},
+  "containerEnv": {
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": "${WAYLAND_DISPLAY}",
+    "XDG_RUNTIME_DIR": "${XDG_RUNTIME_DIR}",
+    "PULSE_SERVER": "${PULSE_SERVER}"
+  },
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+    "source=/mnt/wslg,target=/mnt/wslg,type=bind,consistency=cached"
+  ]
+}
