@@ -7,9 +7,7 @@ Temporary feature based on https://github.com/devcontainers/features/pull/240 (w
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features-playground/hugo:1": {
-        "version": "latest"
-    }
+    "ghcr.io/stuartleeks/dev-container-features-playground/hugo:1": {}
 }
 ```
 
