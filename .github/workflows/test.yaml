@@ -12,7 +12,8 @@ jobs:
     strategy:
       matrix:
         features: [
-           "hugo"
+           "hugo",
+           "dev-tunnel"
         ]
         baseImage:
           [
