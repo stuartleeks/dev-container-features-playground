@@ -3,12 +3,11 @@
 
 Add a hosts file entry in the dev container.
 
-
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features-playground/hugo:1": {}
+    "ghcr.io/stuartleeks/dev-container-features-playground/add-host:1": {}
 }
 ```
 
@@ -17,7 +16,7 @@ Add a hosts file entry in the dev container.
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | host_name | Host name to add to the container's hosts file | string | host.docker.internal |
-| extended | The IP Address to associate with the host name | string | |
+| host_ip | The IP Address to associate with the host name | string | - |
 
 
 
