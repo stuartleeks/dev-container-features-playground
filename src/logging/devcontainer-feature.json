@@ -1,0 +1,22 @@
+{
+    "name": "Logging",
+    "id": "logging",
+    "version": "1.0.0",
+    "description": "Logs lifecycle events with timestamps and parameters to a file. Supports being specified multiple times to inspect feature merge behavior.",
+    "options": {
+        "message": {
+            "type": "string",
+            "default": "default",
+            "description": "A label/message to include in log entries, useful for identifying which instance produced the log line"
+        },
+        "log_file": {
+            "type": "string",
+            "default": "/dc/feature-log/lifecycle.log",
+            "description": "Path to the log file"
+        }
+    },
+    "onCreateCommand": "/dc/feature-log/hooks/oncreate.sh",
+    "postCreateCommand": "/dc/feature-log/hooks/postcreate.sh",
+    "postStartCommand": "/dc/feature-log/hooks/poststart.sh",
+    "postAttachCommand": "/dc/feature-log/hooks/postattach.sh"
+}
