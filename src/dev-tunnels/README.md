@@ -7,9 +7,7 @@ Set up the `devtunnel` CLI for working with [Dev Tunnels](https://learn.microsof
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features/dev-tunnels:0": {
-        "version": "latest"
-    }
+    "ghcr.io/stuartleeks/dev-container-features-playground/dev-tunnels:0": {}
 }
 ```
 
@@ -30,4 +28,4 @@ Set up the `devtunnel` CLI for working with [Dev Tunnels](https://learn.microsof
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/dev-tunnels/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features-playground/blob/main/src/dev-tunnels/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
