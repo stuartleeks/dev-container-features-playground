@@ -4,15 +4,15 @@
     "version": "1.0.0",
     "description": "Logs lifecycle events with timestamps and parameters to a file. Supports being specified multiple times to inspect feature merge behavior.",
     "options": {
+        "id": {
+            "type": "string",
+            "default": "default",
+            "description": "Unique identifier for this feature instance. Used in script and log file names so multiple instances don't interfere with each other."
+        },
         "message": {
             "type": "string",
             "default": "default",
             "description": "A label/message to include in log entries, useful for identifying which instance produced the log line"
-        },
-        "log_file": {
-            "type": "string",
-            "default": "/dc/feature-log/lifecycle.log",
-            "description": "Path to the log file"
         }
     },
     "onCreateCommand": "/dc/feature-log/hooks/oncreate.sh",

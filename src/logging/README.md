@@ -10,8 +10,8 @@ Add the feature to your `devcontainer.json`:
 {
     "features": {
         "ghcr.io/<owner>/dev-container-features-playground/logging:1": {
-            "message": "project-config",
-            "log_file": "/dc/feature-log/lifecycle.log"
+            "id": "project",
+            "message": "project-config"
         }
     }
 }
@@ -19,52 +19,55 @@ Add the feature to your `devcontainer.json`:
 
 ### Testing multiple instances
 
-To observe how features behave when specified multiple times, add the feature at different levels or with different options:
+To observe how features behave when specified from different sources, use a different `id` at each level. Each instance gets its own log file and hook scripts, so they don't interfere.
+
+In your project `devcontainer.json`:
 
 ```json
 {
     "features": {
         "ghcr.io/<owner>/dev-container-features-playground/logging:1": {
-            "message": "first-instance"
+            "id": "project",
+            "message": "from-project"
         }
     }
 }
 ```
 
-And in a second configuration (e.g. user-level settings):
+In your VS Code user settings (`dev.containers.defaultFeatures`):
 
 ```json
 {
-    "features": {
-        "ghcr.io/<owner>/dev-container-features-playground/logging:1": {
-            "message": "second-instance"
-        }
+    "ghcr.io/<owner>/dev-container-features-playground/logging:1": {
+        "id": "user",
+        "message": "from-user-settings"
     }
 }
 ```
 
-After the container starts, inspect the log:
+After the container starts, inspect the logs:
 
 ```bash
-cat /dc/feature-log/lifecycle.log
+cat /dc/feature-log/project.log
+cat /dc/feature-log/user.log
 ```
-
-You'll see entries for each lifecycle phase from each instance, making it clear how features are merged and executed.
 
 ## Options
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `message` | string | `default` | A label to include in log entries, useful for identifying which instance produced the line |
-| `log_file` | string | `/dc/feature-log/lifecycle.log` | Path to the log file |
+| `id` | string | `default` | Unique identifier for this instance. Drives script and log file names so multiple instances don't collide. |
+| `message` | string | `default` | A label to include in log entries |
 
 ## Log format
 
 Each log line follows the format:
 
 ```
-[<ISO-8601 timestamp>] hook=<phase> instance=<N> message="<message>" log_file="<path>"
+[<ISO-8601 timestamp>] hook=<phase> id=<id> message="<message>"
 ```
+
+Log files are written to `/dc/feature-log/<id>.log`.
 
 ### Phases logged
 
@@ -78,4 +81,4 @@ Each log line follows the format:
 
 ## How it handles multiple instances
 
-Each time the feature is installed (each instance), it registers itself with a unique instance number under `/dc/feature-log/instances/`. The lifecycle hook scripts iterate over all registered instances and log an entry for each one, so you can see exactly how many times the feature was applied and with what parameters.
+Each instance registers itself under `/dc/feature-log/instances/<id>.env` and creates per-instance hook scripts at `/dc/feature-log/hooks/<hook>-<id>.sh`. Shared dispatcher scripts (`oncreate.sh`, etc.) run all registered per-instance scripts, so every instance logs independently to its own file.
